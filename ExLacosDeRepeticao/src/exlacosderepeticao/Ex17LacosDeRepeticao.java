@@ -17,5 +17,11 @@ public class Ex17LacosDeRepeticao {
         System.out.println("Digite um numero inteiro para ser mostrado o seu fatorial: ");
         
         int numero = scan.nextInt();
+        
+        for (int i = numero; i >= 1; i--){
+            int fatorial = numero*i;
+            
+            System.out.println(numero +" x "+ i +" = "+ fatorial);
+        }
     }
 }
