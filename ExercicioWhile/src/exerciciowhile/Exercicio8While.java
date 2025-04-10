@@ -10,22 +10,21 @@ package exerciciowhile;
  */
 import java.util.Scanner;
 
-public class Exercicio3While {
+public class Exercicio8While {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         
-        System.out.println("Digite um numero: ");
+        System.out.println("Digite o tamanho do lado do quadrado em numeros inteiros: ");
         
-        int numero = scan.nextInt();
+        int lado = scan.nextInt();
         
-        for(int i = 1; i <= numero; i += 2)
+        for(int i = 1; i < lado; i++)
         {
-            System.out.println("Impares: " + i);
+            System.out.print("*");
         }
-        
-        for(int j = 0; j <= numero; j += 2)
+        for(int j = 0; j <= lado-2; j++)
         {
-            System.out.println("Pares: " + j);
+            System.out.println("*");
         }
     }
 }

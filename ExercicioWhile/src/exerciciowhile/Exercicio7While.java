@@ -10,24 +10,25 @@ package exerciciowhile;
  */
 import java.util.Scanner;
 
-public class Exercicio5While {
+public class Exercicio7While {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         
-        int maiorNumero = 0;
+        System.out.println("Digite o tamanho do lado do quadrado em numeros inteiros: ");
         
-        for (int i = 1; i <= 10; i++)
+        int lado = scan.nextInt();
+        
+        int area = lado*lado;
+        
+        for(int i = 1; i <= area; i++)
         {
-            System.out.println("Digite um numero: ");
+            System.out.print("*");
             
-            int j = scan.nextInt();
-            
-            if(maiorNumero<j)
-            {
-                maiorNumero = j;
+            if(i == lado){
+                System.out.print("\n");
+                i = i - lado;
+                area = area - lado;
             }
-        }
-        
-        System.out.println("O maior numero que voce digitou: " + maiorNumero);
+        }  
     }
 }
