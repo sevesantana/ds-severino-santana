@@ -21,11 +21,17 @@ public class Exercicio6While {
         {
             System.out.println("Digite um numero: ");
             
+            segundoMaior = j;
+            
             int numero = scan.nextInt();
             
             if (maiorNumero<numero)
             {
                maiorNumero = numero; 
+            }
+            if (numero>segundoMaior && numero<maiorNumero)
+            {
+                segundoMaior = numero;
             }
         }
         

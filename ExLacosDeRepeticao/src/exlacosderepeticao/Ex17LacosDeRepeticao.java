@@ -18,10 +18,14 @@ public class Ex17LacosDeRepeticao {
         
         int numero = scan.nextInt();
         
-        for (int i = numero; i >= 1; i--){
+        int resultado = 0;
+        
+        for (int i = numero-1; i >= 1; i--){
             int fatorial = numero*i;
+            numero = fatorial;
             
-            System.out.println(numero +" x "+ i +" = "+ fatorial);
+            resultado = fatorial;
         }
+        System.out.println(resultado);
     }
 }
