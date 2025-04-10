@@ -14,30 +14,31 @@ public class Ex19LacosDeRepeticao {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         
-        int menorValor = 0;
+        int menorValor = 1000;
         int maiorValor = 0;
         int somaValores = 0;
         
         for(int i = 1; i <= 10; i++){
+            
             System.out.println("Digite um numero: ");
             
             int j = scan.nextInt();
             
-            if(j>1000){
-                System.out.println("Digite um numero entre 0 e 1000.");
+            if(j<1 || j>1000){
+                System.out.println("Digite numeros entre 1 e 1000.");
                 i--;
             }
             
-            int menorValor2 = j;
-            
-            if(menorValor>j){
+            if(menorValor>j && j>0){
                 menorValor = j;
             }
-            if(maiorValor<j && maiorValor<1000){
+            if(maiorValor<j && j<=1000){
                 maiorValor = j;
             }
             
-            somaValores = somaValores+j;
+            if(j>0 && j<=1000){
+             somaValores = somaValores+j;   
+            }
         }
         System.out.println("O menor valor desse conjunto de numeros e: "+ menorValor);
         System.out.println("O maior valor desse conjunto de numeros e: "+ maiorValor);

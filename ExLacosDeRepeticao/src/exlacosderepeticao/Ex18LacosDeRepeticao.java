@@ -14,19 +14,18 @@ public class Ex18LacosDeRepeticao {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         
-        int menorValor = 0;
+        int menorValor = 1000;
         int maiorValor = 0;
         int somaValores = 0;
         
         for(int i = 1; i <= 10; i++){
+            
             System.out.println("Digite um numero: ");
             
             int j = scan.nextInt();
             
-            menorValor = j;
-            
-            if(j<){
-                j = menorValor;
+            if(menorValor>j){
+                menorValor = j;
             }
             if(maiorValor<j){
                 maiorValor = j;
