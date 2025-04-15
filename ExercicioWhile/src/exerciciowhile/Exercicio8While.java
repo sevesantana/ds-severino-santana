@@ -18,13 +18,40 @@ public class Exercicio8While {
         
         int lado = scan.nextInt();
         
-        for(int i = 1; i < lado; i++)
+        for(int i = 1; i <= lado; i++)
         {
             System.out.print("*");
+            
+            if(i == lado)
+            {
+                System.out.print("\n");
+            }
         }
-        for(int j = 0; j <= lado-2; j++)
+        for(int k = 1; k <= lado-2; k++)
+        { 
+            for(int i = 1; i <= 2; i++)
+            {
+                System.out.print("*");
+            
+                for(int j = 1; j <= (lado-2); j++)
+                {
+                    System.out.print(" ");
+                }
+            
+                if(i % 2 == 0)
+                {
+                    System.out.print("\n");
+                }
+            }
+        }
+         for(int i = 1; i <= lado; i++)
         {
-            System.out.println("*");
+            System.out.print("*");
+            
+            if(i == lado)
+            {
+                System.out.print("\n");
+            }
         }
     }
 }
