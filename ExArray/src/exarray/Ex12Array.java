@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package exarray;
+
+/**
+ *
+ * @author snsf2
+ */
+public class Ex12Array {
+    public static void main(String[] args){
+        int n[] = {10, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        
+        double soma = 0;
+        int maiores = 0;
+        
+        for(int i = 0; i < n.length; i++){
+            soma += n[i];
+        }
+        
+        double media = soma/n.length;
+        
+        for(int j = 0; j < n.length; j++){
+            if(n[j] > media){
+                maiores += 1;
+            }
+        }
+        
+        System.out.println(maiores + " numeros sao maiores que a media.");
+    }
+}

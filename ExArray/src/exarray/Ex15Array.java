@@ -8,13 +8,12 @@ package exarray;
  *
  * @author snsf2
  */
-public class Ex4Array {
+public class Ex15Array {
     public static void main(String[] args){
-        int[] numeros = {11, 10, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int n[] = {10, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         
-        for(int i = 0; i < numeros.length; i++){
-            i = numeros.length-i;
-            System.out.println(numeros[i]);
+        for(int i = 1; i < n.length; i += 2){
+            System.out.println(n[i]);
         }
     }
 }
