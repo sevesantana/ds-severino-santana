@@ -2,6 +2,7 @@ package carropoo;
 
 import Classe.Carro;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class CarroPoo {
 
@@ -19,49 +20,41 @@ public class CarroPoo {
         carro1.setVelocidade(0);            
         
         do{
-        System.out.println("1 - Ligar");
-        System.out.println("2 - Desligar");
-        System.out.println("3 - Acelerar");
-        System.out.println("4 - Frear");
-        System.out.println("5 - Exibir informacoes");
-        System.out.println("6 - Sair");
-        System.out.println("O que voce deseja fazer?");
+            int r = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Ligar\n2 - Desligar\n3 - Acelerar\n4 - Frear\n5 - Exibir informacoes\n6 - Sair\nO que voce deseja fazer?", "Menu", JOptionPane.QUESTION_MESSAGE ));
+            //System.out.println("1 - Ligar");
+            //System.out.println("2 - Desligar");
+            //System.out.println("3 - Acelerar");
+            //System.out.println("4 - Frear");
+            //System.out.println("5 - Exibir informacoes");
+            //System.out.println("6 - Sair");
+            //System.out.println("O que voce deseja fazer?");
         
-        resposta = scan.nextInt();
+            //resposta = scan.nextInt();
+            
+            resposta = r;
         
-        switch(resposta){
-            case 1:
-                carro1.ligar();
-                break;
-            case 2:
-                carro1.desligar();
-                break;
-            case 3:
-                carro1.acelerar();
-                break;
-            case 4:
-                carro1.frear();
-                break;
-            case 5:
-                System.out.println("----- Informacoes do carro -----");
-                System.out.println("Cor: " + carro1.getCor());
-                System.out.println("Marca: " + carro1.getMarca());
-                System.out.println("Modelo: " + carro1.getModelo());
-                System.out.println("Ano: " + carro1.getAno());
-                System.out.println("Estado: " + (carro1.isLigado() ? "Ligado" : "Desligado"));
-                System.out.println("Velocidade: " + carro1.getVelocidade());
-                System.out.println("-----");
-                break;
-            case 6:
-                System.out.println("-----");
-                System.out.println("Saindo do programa...");
-                System.out.println("-----");
-                break;
-            default:
-                System.out.println("-----");
-                System.out.println("Escolha uma opcao valida.");
-                System.out.println("-----");
-        }
+            switch(r){
+                case 1:
+                    carro1.ligar();
+                    break;
+                case 2:
+                    carro1.desligar();
+                    break;
+                case 3:
+                    carro1.acelerar();
+                    break;
+                case 4:
+                    carro1.frear();
+                    break;
+                case 5:
+                    JOptionPane.showMessageDialog(null, "Cor: " + carro1.getCor() + "\nMarca: " + carro1.getMarca() + "\nModelo: " + carro1.getModelo() + "\nAno: " + carro1.getAno() + "\nEstado: " + (carro1.isLigado() ? "Ligado" : "Desligado") + "\nVelocidade atual: " + carro1.getVelocidade() + "Km/h.", "Informacoes do carro", JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                case 6:
+                    JOptionPane.showMessageDialog(null, "Saindo do programa...");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Escolha uma opcao valida.");
+            }
         } while (resposta != 6);
                 
                 

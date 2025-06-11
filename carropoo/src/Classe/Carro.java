@@ -1,5 +1,7 @@
 package Classe;
 
+    import javax.swing.JOptionPane;
+
 public class Carro {
    
     private String cor;
@@ -62,40 +64,28 @@ public class Carro {
     public void ligar(){
         if(!ligado){
             ligado = true;
-            System.out.println("-----");
-            System.out.println("O carro foi ligado.");
-            System.out.println("-----");
+            JOptionPane.showMessageDialog(null, "O carro foi ligado.");
         } else {
-            System.out.println("-----");
-            System.out.println("O carro ja esta ligado.");
-            System.out.println("-----");
+            JOptionPane.showMessageDialog(null, "O carro ja esta ligado.");
         }
     }
     
     public void desligar(){
         if(ligado) {
             ligado = false;
-            System.out.println("-----");
-            System.out.println("O carro foi desligado.");
-            System.out.println("-----");
+            JOptionPane.showMessageDialog(null, "O carro foi desligado");
         } else {
-            System.out.println("-----");
-            System.out.println("O carro ja esta desligado.");
-            System.out.println("-----");
+            JOptionPane.showMessageDialog(null, "O carro ja esta desligado.");
         }
 }
     
     public void acelerar(){
         velocidade += 10;
-        System.out.println("-----");
-        System.out.println("A velocidade atual do carro e de: " + velocidade + "Km/h.");
-        System.out.println("-----");
+        JOptionPane.showMessageDialog(null, "A velocidade atual do carro e de: " + velocidade + "Km/h.");
     }
     
     public void frear(){
         velocidade -= 10;
-        System.out.println("-----");
-        System.out.println("A velocidade atual do carro e de: " + velocidade + "Km/h.");
-        System.out.println("-----");
+        JOptionPane.showMessageDialog(null, "A velocidade atual do carro e de: " + velocidade + "Km/h.");
     }
 }
